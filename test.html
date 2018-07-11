@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trying to use class</title>
+</head>
+<body>
+	<form>
+		<input type="submit" value="Submit" onclick="say();">
+	</form>
+<script type="text/javascript">
+	class block{
+		init(first,last)
+		{
+			this.first=first;
+			this.last=last;
+		}
+		print()
+		{
+			document.write(JSON.stringify(this));
+			document.write("\n");
+		} 
+	}
+function say(){
+var user=new Array();
+var block1=new block();
+block1.init("Gunjan","Singh");
+user.push(block1);
+var block2=new block();
+block2.init("Raj","Singh");
+user.push(block2);
+ for(var i=0;i<user.length;i++)
+ {
+ 	user[i].print();
+ 	document.write("\n");
+ }
+}
+</script>
+</body>
+</html>
